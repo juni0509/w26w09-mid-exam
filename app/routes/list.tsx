@@ -13,7 +13,7 @@ export default function List() {
     queryKey: ['vacation-wishes'],
     queryFn: async () => {
       const { data, error } = await supabase
-        .from('wishes_typo')
+        .from('wishes')
         .select('*')
       if (error) throw new Error(error.message)
       return data
